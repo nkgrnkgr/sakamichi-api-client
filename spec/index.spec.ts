@@ -3,6 +3,14 @@ import SakamichiApi from "../src";
 const sakamichiApiClient = new SakamichiApi();
 
 describe("src/index.ts", () => {
+  test("listAllMemberProfile", async () => {
+    const response = await sakamichiApiClient.listAllMemberProfile({ grounpName: 'hiraganakeyaki' })
+    const { data } = response;
+    expect(data.length).toBe(20)
+  });
+});
+
+describe("src/index.ts", () => {
   test("getMemberCount", async () => {
     const response = await sakamichiApiClient.getMemberCount({ grounpName: 'hiraganakeyaki' })
     const { data } = response;
