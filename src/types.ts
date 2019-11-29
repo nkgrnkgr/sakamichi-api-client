@@ -1,5 +1,5 @@
 type GrounpName = "nogizaka46" | "keyakizaka46";
-type GetOfficialGoodsSiteUrlformobileParam = {
+type GetOfficialGoodsSiteUrlforMobileParam = {
   grounpName: GrounpName;
 };
-type GetOfficialGoodsSiteUrlformobileResponse = string;
+type GetOfficialGoodsSiteUrlforMobileResponse = string;
