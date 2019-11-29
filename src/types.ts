@@ -9,7 +9,7 @@ export type MemberProfile = {
   blogUri: string;
   goodsUri: string;
   matomeUri: string[];
-}
+};
 
 export type GetMemberProfileParam = {
   grounpName: GrounpName;
