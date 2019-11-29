@@ -11,6 +11,21 @@ class SakamichiApi {
     });
   }
 
+  async getMemberProfile (
+    query: GetMemberProfileParam
+  ): Promise<AxiosResponse<GetMemberProfileResponse>> {
+    try {
+      const response = await this.APIClient.get<
+        GetMemberProfileResponse
+      >(`/${query.grounpName}/profile/${query.memberName}`);
+
+      return response;
+    } catch (e) {
+      return Promise.reject(e);
+    }
+  }
+
+
   async listAllMemberProfile (
     query: ListAllMemberProfileParam
   ): Promise<AxiosResponse<ListAllMemberProfileResponse>> {
