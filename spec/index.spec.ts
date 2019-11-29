@@ -1,6 +1,15 @@
 import SakamichiApi from "../src";
 
 describe("src/index.ts", () => {
+  test("getMemberCount", async () => {
+    const sakamichiApiClient = new SakamichiApi();
+    const response = await sakamichiApiClient.getMemberCount({ grounpName: 'hiraganakeyaki' })
+    const { data } = response;
+    expect(typeof data).toBe('number')
+  });
+});
+
+describe("src/index.ts", () => {
   test("getOfficialBlogSiteUrl", async () => {
     const sakamichiApiClient = new SakamichiApi();
     const response = await sakamichiApiClient.getOfficialBlogUrl({ grounpName: 'nogizaka46' })

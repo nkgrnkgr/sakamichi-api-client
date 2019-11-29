@@ -1,4 +1,9 @@
-type GrounpName = "nogizaka46" | "keyakizaka46";
+type GrounpName = "nogizaka46" | "keyakizaka46" | "hiraganakeyaki";
+
+type GetMemberCountPram = {
+  grounpName: GrounpName;
+};
+type GetMemberCountResponse = number;
 
 type GetOfficialBlogUrlParam = {
   grounpName: GrounpName;
@@ -9,7 +14,6 @@ type GetOfficialBlogUrlforMobileParam = {
   grounpName: GrounpName;
 };
 type GetOfficialBlogUrlforMobileResponse = string;
-
 
 type GetOfficialGoodsSiteUrlParam = {
   grounpName: GrounpName;
