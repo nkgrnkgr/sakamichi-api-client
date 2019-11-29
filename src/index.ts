@@ -12,11 +12,11 @@ class SakamichiApi {
   }
 
   async getOfficialGoodsSiteUrlformobile(
-    query: GetOfficialGoodsSiteUrlformobileParam
-  ): Promise<AxiosResponse<GetOfficialGoodsSiteUrlformobileResponse>> {
+    query: GetOfficialGoodsSiteUrlforMobileParam
+  ): Promise<AxiosResponse<GetOfficialGoodsSiteUrlforMobileResponse>> {
     try {
       const response = await this.APIClient.get<
-        GetOfficialGoodsSiteUrlformobileResponse
+        GetOfficialGoodsSiteUrlforMobileResponse
       >(`/${query.grounpName}/goods/mobile`);
 
       return response;
