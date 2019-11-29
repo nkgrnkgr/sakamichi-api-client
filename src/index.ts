@@ -1,4 +1,5 @@
 import axios, { AxiosInstance, AxiosResponse } from "axios";
+import { GetMemberProfileParam, GetMemberProfileResponse, ListAllMemberProfileParam, ListAllMemberProfileResponse, GetMemberCountPram, GetMemberCountResponse, GetOfficialBlogUrlforMobileParam, GetOfficialBlogUrlforMobileResponse, GetOfficialBlogUrlParam, GetOfficialBlogUrlResponse, GetOfficialGoodsSiteUrlParam, GetOfficialGoodsSiteUrlResponse, GetOfficialGoodsSiteUrlforMobileParam, GetOfficialGoodsSiteUrlforMobileResponse } from "./types";
 
 class SakamichiApi {
   private APIClient: AxiosInstance;
@@ -55,8 +56,8 @@ class SakamichiApi {
   }
 
   async getOfficialBlogUrl (
-    query: GetOfficialBlogUrlforMobileParam
-  ): Promise<AxiosResponse<GetOfficialBlogUrlforMobileResponse>> {
+    query: GetOfficialBlogUrlParam
+  ): Promise<AxiosResponse<GetOfficialBlogUrlResponse>> {
     try {
       const response = await this.APIClient.get<
         GetOfficialBlogUrlforMobileResponse
