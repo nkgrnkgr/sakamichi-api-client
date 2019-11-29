@@ -1,4 +1,20 @@
 import axios, { AxiosInstance, AxiosResponse } from "axios";
+import {
+  GetMemberProfileParam,
+  GetMemberProfileResponse,
+  ListAllMemberProfileParam,
+  ListAllMemberProfileResponse,
+  GetMemberCountPram,
+  GetMemberCountResponse,
+  GetOfficialBlogUrlforMobileParam,
+  GetOfficialBlogUrlforMobileResponse,
+  GetOfficialBlogUrlParam,
+  GetOfficialBlogUrlResponse,
+  GetOfficialGoodsSiteUrlParam,
+  GetOfficialGoodsSiteUrlResponse,
+  GetOfficialGoodsSiteUrlforMobileParam,
+  GetOfficialGoodsSiteUrlforMobileResponse
+} from "./types";
 
 class SakamichiApi {
   private APIClient: AxiosInstance;
@@ -11,13 +27,13 @@ class SakamichiApi {
     });
   }
 
-  async getMemberProfile (
+  async getMemberProfile(
     query: GetMemberProfileParam
   ): Promise<AxiosResponse<GetMemberProfileResponse>> {
     try {
-      const response = await this.APIClient.get<
-        GetMemberProfileResponse
-      >(`/${query.grounpName}/profile/${query.memberName}`);
+      const response = await this.APIClient.get<GetMemberProfileResponse>(
+        `/${query.grounpName}/profile/${query.memberName}`
+      );
 
       return response;
     } catch (e) {
@@ -25,14 +41,13 @@ class SakamichiApi {
     }
   }
 
-
-  async listAllMemberProfile (
+  async listAllMemberProfile(
     query: ListAllMemberProfileParam
   ): Promise<AxiosResponse<ListAllMemberProfileResponse>> {
     try {
-      const response = await this.APIClient.get<
-        ListAllMemberProfileResponse
-      >(`/${query.grounpName}/profile`);
+      const response = await this.APIClient.get<ListAllMemberProfileResponse>(
+        `/${query.grounpName}/profile`
+      );
 
       return response;
     } catch (e) {
@@ -40,13 +55,13 @@ class SakamichiApi {
     }
   }
 
-  async getMemberCount (
+  async getMemberCount(
     query: GetMemberCountPram
   ): Promise<AxiosResponse<GetMemberCountResponse>> {
     try {
-      const response = await this.APIClient.get<
-        GetMemberCountResponse
-      >(`/${query.grounpName}/count`);
+      const response = await this.APIClient.get<GetMemberCountResponse>(
+        `/${query.grounpName}/count`
+      );
 
       return response;
     } catch (e) {
@@ -54,9 +69,9 @@ class SakamichiApi {
     }
   }
 
-  async getOfficialBlogUrl (
-    query: GetOfficialBlogUrlforMobileParam
-  ): Promise<AxiosResponse<GetOfficialBlogUrlforMobileResponse>> {
+  async getOfficialBlogUrl(
+    query: GetOfficialBlogUrlParam
+  ): Promise<AxiosResponse<GetOfficialBlogUrlResponse>> {
     try {
       const response = await this.APIClient.get<
         GetOfficialBlogUrlforMobileResponse
@@ -68,7 +83,7 @@ class SakamichiApi {
     }
   }
 
-  async getOfficialBlogUrlforMobile (
+  async getOfficialBlogUrlforMobile(
     query: GetOfficialBlogUrlforMobileParam
   ): Promise<AxiosResponse<GetOfficialBlogUrlforMobileResponse>> {
     try {

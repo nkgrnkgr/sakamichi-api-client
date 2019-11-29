@@ -4,16 +4,40 @@
 
 ![](https://github.com/nkgrnkgr/sakamichi-api-client/workflows/CI/badge.svg)
 
-<!-- ## Installation
+## Installation
 
 ```bash
-$ yarn add ...
-``` -->
+$ npm i sakamichi-api-client
+```
 
-<!-- ## Usage -->
+## Usage
 
-<!-- ```ts
-``` -->
+```ts
+import SakamichiApiClient from 'sakamichi-api-client';
+
+const run = () async => {
+    const response = await sakamichiApiClient.getMemberProfile({ grounpName: 'nogizaka46', memberName: 'shiraishimai' })
+    const { data } = response;
+    console.log(data);
+}
+
+run();
+```
+
+```json
+{
+    "name": "白石麻衣",
+    "birthday": "1992-08-20",
+    "bloodType": "A",
+    "constellation": "しし座",
+    "profilePhotoUri": "http://img.nogizaka46.com/www/member/img/shiraishimai_prof.jpg",
+    "blogUri": "http://blog.nogizaka46.com/mai.shiraishi/smph/",
+    "goodsUri": "http://www.nogizaka46shop.com/msp/store/list.cgi?cno=4&cmno=45",
+    "matomeUri": [
+        "http://nogizaka46democracy.blog.jp/archives/cat_51850.html"
+    ]
+}
+```
 
 ## Type definition
 

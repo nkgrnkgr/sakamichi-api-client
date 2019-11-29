@@ -1,6 +1,6 @@
-type GrounpName = "nogizaka46" | "keyakizaka46" | "hiraganakeyaki";
+export type GrounpName = "nogizaka46" | "keyakizaka46" | "hiraganakeyaki";
 
-type MemberProfile = {
+export type MemberProfile = {
   name: string;
   birthday: string;
   bloodType: string;
@@ -9,40 +9,40 @@ type MemberProfile = {
   blogUri: string;
   goodsUri: string;
   matomeUri: string[];
-}
+};
 
-type GetMemberProfileParam = {
+export type GetMemberProfileParam = {
   grounpName: GrounpName;
   memberName: string;
 };
-type GetMemberProfileResponse = MemberProfile;
+export type GetMemberProfileResponse = MemberProfile;
 
-type ListAllMemberProfileParam = {
+export type ListAllMemberProfileParam = {
   grounpName: GrounpName;
 };
-type ListAllMemberProfileResponse = MemberProfile[];
+export type ListAllMemberProfileResponse = MemberProfile[];
 
-type GetMemberCountPram = {
+export type GetMemberCountPram = {
   grounpName: GrounpName;
 };
-type GetMemberCountResponse = number;
+export type GetMemberCountResponse = number;
 
-type GetOfficialBlogUrlParam = {
+export type GetOfficialBlogUrlParam = {
   grounpName: GrounpName;
 };
-type GetOfficialBlogUrlResponse = string;
+export type GetOfficialBlogUrlResponse = string;
 
-type GetOfficialBlogUrlforMobileParam = {
+export type GetOfficialBlogUrlforMobileParam = {
   grounpName: GrounpName;
 };
-type GetOfficialBlogUrlforMobileResponse = string;
+export type GetOfficialBlogUrlforMobileResponse = string;
 
-type GetOfficialGoodsSiteUrlParam = {
+export type GetOfficialGoodsSiteUrlParam = {
   grounpName: GrounpName;
 };
-type GetOfficialGoodsSiteUrlResponse = string;
+export type GetOfficialGoodsSiteUrlResponse = string;
 
-type GetOfficialGoodsSiteUrlforMobileParam = {
+export type GetOfficialGoodsSiteUrlforMobileParam = {
   grounpName: GrounpName;
 };
-type GetOfficialGoodsSiteUrlforMobileResponse = string;
+export type GetOfficialGoodsSiteUrlforMobileResponse = string;
