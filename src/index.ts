@@ -11,6 +11,20 @@ class SakamichiApi {
     });
   }
 
+  async listAllMemberProfile (
+    query: ListAllMemberProfileParam
+  ): Promise<AxiosResponse<ListAllMemberProfileResponse>> {
+    try {
+      const response = await this.APIClient.get<
+        ListAllMemberProfileResponse
+      >(`/${query.grounpName}/profile`);
+
+      return response;
+    } catch (e) {
+      return Promise.reject(e);
+    }
+  }
+
   async getMemberCount (
     query: GetMemberCountPram
   ): Promise<AxiosResponse<GetMemberCountResponse>> {
@@ -24,6 +38,7 @@ class SakamichiApi {
       return Promise.reject(e);
     }
   }
+
   async getOfficialBlogUrl (
     query: GetOfficialBlogUrlforMobileParam
   ): Promise<AxiosResponse<GetOfficialBlogUrlforMobileResponse>> {
