@@ -1,5 +1,10 @@
 type GrounpName = "nogizaka46" | "keyakizaka46";
 
+type GetOfficialBlogUrlParam = {
+  grounpName: GrounpName;
+};
+type GetOfficialBlogUrlResponse = string;
+
 type GetOfficialBlogUrlforMobileParam = {
   grounpName: GrounpName;
 };
