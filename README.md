@@ -15,10 +15,16 @@ $ npm i sakamichi-api-client
 ```ts
 import SakamichiApiClient from 'sakamichi-api-client';
 
-const run = () async => {
-    const response = await sakamichiApiClient.getMemberProfile({ grounpName: 'nogizaka46', memberName: 'shiraishimai' })
-    const { data } = response;
-    console.log(data);
+const run = () => {
+    const client = new SakamichiApiClient();
+    client.getMemberProfile(
+        {
+            grounpName: 'nogizaka46',
+            memberName: 'shiraishimai'
+        })
+        .then(response => {
+            console.log(response.data);
+        })
 }
 
 run();
