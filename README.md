@@ -1,6 +1,6 @@
-# sakamichi-api-client for Node.js
+# sakamichi-api-client for TypeScirpt
 
-[Sakamichi46Api](https://github.com/kikutaro/Sakamichi46Api/blob/master/README.md) client library for Node.js.
+[Sakamichi46Api](https://github.com/kikutaro/Sakamichi46Api/blob/master/README.md) client library for TypeScirpt
 
 ![](https://github.com/nkgrnkgr/sakamichi-api-client/workflows/CI/badge.svg)
 
