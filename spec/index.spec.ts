@@ -1,6 +1,15 @@
 import SakamichiApi from "../src";
 
 describe("src/index.ts", () => {
+  test("getOfficialBlogSiteUrlforMoblie", async () => {
+    const sakamichiApiClient = new SakamichiApi();
+    const response = await sakamichiApiClient.getOfficialBlogUrlforMobile({ grounpName: 'nogizaka46' })
+    const { data } = response;
+    expect(data).toBe('http://www.nogizaka46.com/smph/')
+  });
+});
+
+describe("src/index.ts", () => {
   test("getOfficialGoodsSiteUrl", async () => {
     const sakamichiApiClient = new SakamichiApi();
     const response = await sakamichiApiClient.getOfficialGoodsSiteUrl({ grounpName: 'nogizaka46' })

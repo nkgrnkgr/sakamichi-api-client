@@ -11,6 +11,20 @@ class SakamichiApi {
     });
   }
 
+  async getOfficialBlogUrlforMobile (
+    query: GetOfficialBlogUrlforMobileParam
+  ): Promise<AxiosResponse<GetOfficialBlogUrlforMobileResponse>> {
+    try {
+      const response = await this.APIClient.get<
+        GetOfficialBlogUrlforMobileResponse
+      >(`/${query.grounpName}/blog/mobile`);
+
+      return response;
+    } catch (e) {
+      return Promise.reject(e);
+    }
+  }
+
   async getOfficialGoodsSiteUrl(
     query: GetOfficialGoodsSiteUrlParam
   ): Promise<AxiosResponse<GetOfficialGoodsSiteUrlResponse>> {
