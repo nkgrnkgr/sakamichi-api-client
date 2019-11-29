@@ -11,6 +11,12 @@ type MemberProfile = {
   matomeUri: string[];
 }
 
+type GetMemberProfileParam = {
+  grounpName: GrounpName;
+  memberName: string;
+};
+type GetMemberProfileResponse = MemberProfile;
+
 type ListAllMemberProfileParam = {
   grounpName: GrounpName;
 };
