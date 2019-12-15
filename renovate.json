@@ -4,5 +4,8 @@
     ],
     "labels": [
         "renovate"
-    ]
+    ],
+    "minor": {
+        "groupName": "all dependencies"
+    }
 }
