@@ -17,7 +17,7 @@
   "devDependencies": {
     "@types/axios": "0.14.0",
     "@types/jest": "25.2.3",
-    "@types/node": "12.12.41",
+    "@types/node": "12.12.42",
     "jest": "26.0.1",
     "prettier": "2.0.5",
     "standard-version": "7.1.0",
